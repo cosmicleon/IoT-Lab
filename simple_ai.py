@@ -41,7 +41,7 @@ def imageDectector():
     # Print prediction and confidence score
     print("Class:", class_name[2:], end="\n")
     print("Confidence Score:", str(np.round(confidence_score * 100))[:-2], "%")
-    return class_name[2:] + ", " + str(np.round(confidence_score * 100))[:-2] + "%"
+    return class_name[2:] + ": " + str(np.round(confidence_score * 100))[:-2] + "%"
     # # Listen to the keyboard for presses.
     # keyboard_input = cv2.waitKey(1)
 

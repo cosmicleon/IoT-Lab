@@ -7,7 +7,7 @@ from uart import *
 
 from Adafruit_IO import MQTTClient
 
-AIO_FEED_ID = ["iot-lab.button1", "iot-lab.button2"]
+AIO_FEED_ID = ["iot-lab.button1", "iot-lab.button2", "iot-lab.save-led"]
 AIO_USERNAME = "cosmic_leon"
 AIO_KEY = "aio_zRrZ45wf3t06dxHVALk4EuQf5UUG"
 
