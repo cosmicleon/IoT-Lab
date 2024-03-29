@@ -1,0 +1,2 @@
+0 Eyeclose
+1 Eyeopen
