@@ -14,7 +14,7 @@ class_names = open("labels.txt", "r").readlines()
 # CAMERA can be 0 or 1 based on default camera of your computer
 camera = cv2.VideoCapture(0)
 
-lable = ["Eyeclose", "Eyeopen"]
+# lable = ["Eyeclose", "Eyeopen"]
 
 def imageDectector():
     # Grab the webcamera's image.

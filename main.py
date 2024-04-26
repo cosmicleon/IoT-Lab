@@ -29,6 +29,16 @@ def disconnected(client):
 
 def message(client , feed_id , payload):
     print("Received data: " + payload + ", feed id: " + feed_id)
+    if feed_id == "iot-lab.button1":
+        if payload == "0":
+            writeData("Light off")
+        else:
+            writeData("Light on")
+    if feed_id == "iot-lab.button2":
+        if payload == "0":
+            writeData("Pump off")
+        else:
+            writeData("Pump on")
 
 
 client = MQTTClient(AIO_USERNAME, AIO_KEY)
@@ -46,28 +56,32 @@ previousAIresult = ""
 
 
 while True:
-    # Publish sensor data
-    counter = counter - 1
-    if counter <= 0:
-        counter = 10
-        print("Random data is publishing...")
-        temp = random.randint(15, 60)
-        client.publish("sensor1", temp, "iot-lab")
-        lumi = random.randint(100, 500)
-        client.publish("sensor2", lumi, "iot-lab")
-        humi = random.randint(50, 70)
-        client.publish("sensor3", humi, "iot-lab")
+    # # Publish sensor data
+    # counter = counter - 1
+    # if counter <= 0:
+    #     counter = 10
+    #     print("Random data is publishing...")
+        # temp = random.randint(15, 60)
+        # client.publish("sensor1", temp, "iot-lab")
+    #     lumi = random.randint(100, 500)
+    #     client.publish("sensor2", lumi, "iot-lab")
+    #     humi = random.randint(50, 70)
+    #     client.publish("sensor3", humi, "iot-lab")
 
-    # Publish AI data
-    counterAI = counterAI - 1
-    if counterAI <= 0:
-        counterAI = 10
-        aiResult = imageDectector()
-        # if previousAIresult == aiResult:
-        client.publish("ai", aiResult, "iot-lab")
-        # previousAIresult = aiResult
-        # print("AI Output: ", aiResult)
-    # readSerial(client)
+    # # Publish AI data
+    # counterAI = counterAI - 1
+    # if counterAI <= 0:
+    #     counterAI = 10
+    #     aiResult = imageDectector()
+    #     # if previousAIresult == aiResult:
+    #     client.publish("ai", aiResult, "iot-lab")
+    #     # previousAIresult = aiResult
+    #     # print("AI Output: ", aiResult)
+
+    # client.publish("ai", "Có ánh sáng", "iot-lab")
+
+    readSerial(client)
+
     time.sleep(1)
     # Listen to the keyboard for presses.
     keyboard_input = cv2.waitKey(1)

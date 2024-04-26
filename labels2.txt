@@ -1,0 +1,5 @@
+0 Eyeclose
+1 Eyeopen
+2 Rock
+3 Paper
+4 Scissors
