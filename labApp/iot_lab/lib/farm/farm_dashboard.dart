@@ -276,9 +276,16 @@ class _FarmDashboard extends State<FarmDashboard> {
             shadowColor: Colors.transparent,
             margin: const EdgeInsets.all(8.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                const Image(
+                  image: NetworkImage(
+                      "https://img.freepik.com/premium-photo/watering-farm-plant-automatic-irrigation_756748-13012.jpg"),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
                 for (var i = 0; i < area.length; i++)
                   Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -320,7 +327,7 @@ class _FarmDashboard extends State<FarmDashboard> {
                         ),
                       ]),
                 const SizedBox(
-                  height: 100,
+                  height: 50,
                 ),
               ],
             )),
@@ -330,9 +337,16 @@ class _FarmDashboard extends State<FarmDashboard> {
           shadowColor: Colors.transparent,
           margin: const EdgeInsets.all(8.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
+              const Image(
+                image: NetworkImage(
+                    "https://img.freepik.com/premium-photo/watering-farm-plant-automatic-irrigation_756748-12794.jpg"),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
               for (var index = 1; index < 4; index++)
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   Text(
@@ -395,9 +409,6 @@ class _FarmDashboard extends State<FarmDashboard> {
                             }
                           }())),
                 ]),
-              const SizedBox(
-                height: 100,
-              ),
               GestureDetector(
                   onTap: () {
                     setState(() {
@@ -422,6 +433,9 @@ class _FarmDashboard extends State<FarmDashboard> {
                           fontWeight: FontWeight.bold,
                         ),
                       ))),
+              const SizedBox(
+                height: 10,
+              ),
             ],
           ),
         ),
@@ -431,9 +445,16 @@ class _FarmDashboard extends State<FarmDashboard> {
           shadowColor: Colors.transparent,
           margin: const EdgeInsets.all(8.0),
           child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                const Image(
+                  image: NetworkImage(
+                      "https://img.freepik.com/premium-photo/efficient-irrigation-techniques-watering-crops-green-farms-boosting-agriculture-food_1014870-16693.jpg"),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
                 for (var i = 0; i < pump.length; i++)
                   Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -513,7 +534,7 @@ class _FarmDashboard extends State<FarmDashboard> {
                 //       ),
                 //     ]),
                 const SizedBox(
-                  height: 150,
+                  height: 100,
                 ),
               ]),
         ),

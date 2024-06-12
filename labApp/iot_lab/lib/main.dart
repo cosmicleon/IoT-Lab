@@ -16,8 +16,8 @@ class IoTApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'BeVietnamPro'),
       title: "IoTApp",
-      // home: const HomePage(),
-      home: const FarmDashboard(),
+      home: const HomePage(),
+      // home: const FarmDashboard(),
     );
   }
 }
